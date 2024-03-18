@@ -1,0 +1,64 @@
+.feedback_container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 100%;
+  padding: 15px;
+  font-family: "satoshi BLACK";
+  font-weight: 900;
+  color: hsl(0, 0%, 80%);
+  background-color: #f7f8fa;
+  border-top: 1px solid hsl(0, 0%, 70%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.title img {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.feedback_modal {
+  position: relative;
+  overflow: hidden;
+  font-weight: 900;
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+  border-radius: 18px;
+  background-color: white;
+  max-height: 0px;
+}
+
+.feedback {
+  position: relative;
+  padding: 10px;
+  font-family: "satoshi REGULAR";
+}
+
+.open {
+  max-height: 0px;
+  animation: expandHeight 1s forwards;
+}
+
+@keyframes expandHeight {
+  from {
+    max-height: 0px;
+  }
+  to {
+    max-height: 300px;
+  }
+}
+
+.rotate {
+  transform: rotate(90deg);
+}

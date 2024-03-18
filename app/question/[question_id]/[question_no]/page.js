@@ -1,6 +1,6 @@
 "use server";
 
-import Home from "./Home";
+import Questions_page from "./Questions_page";
 
 export async function generateMetadata({ params, searchParams }, parent) {
   return {
@@ -13,7 +13,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function page() {
   return (
     <div>
-      <Home />
+      <Questions_page />
     </div>
   );
 }

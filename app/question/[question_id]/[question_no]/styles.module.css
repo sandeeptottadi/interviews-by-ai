@@ -1,0 +1,283 @@
+.question_page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(38, 89%, 99.8%);
+}
+
+.question_container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  width: 700px;
+  max-width: 90%;
+  display: flex;
+  border: 1px solid #c7c7c7;
+  background-color: white;
+  border-radius: 10px;
+  min-height: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.spaced_row {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px;
+  font-family: "satoshi REGULAR";
+  font-size: 1rem;
+}
+
+.back_btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 0%, 58%);
+}
+
+.back_btn img {
+  margin-right: 10px;
+}
+
+.end_btn {
+  padding: 4px 8px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #f9fafb;
+  color: hsl(0, 0%, 58%);
+  border: 2px solid hsl(210, 20%, 88%);
+}
+
+.end_btn:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.question_card {
+  position: relative;
+}
+
+.question_text {
+  font-family: "satoshi BLACK";
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.timer,
+.time {
+  font-family: "satoshi BLACK";
+  color: #c7c7c7;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s infinite ease-in-out;
+}
+
+@keyframes blink {
+  from {
+    color: #c7c7c7;
+  }
+  to {
+    color: hsl(0, 0%, 98%);
+  }
+}
+
+.record_btn {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+}
+
+.rotate_btn {
+  animation: rota 1s linear infinite;
+}
+
+.mic {
+  position: absolute;
+  top: 0%;
+  height: fit-content;
+  width: fit-content;
+  background-color: hsl(38, 89%, 62%);
+  background: linear-gradient(
+    to right,
+    hsl(38, 89%, 72%),
+    hsl(38, 89%, 62%),
+    hsl(38, 89%, 72%)
+  );
+  border-radius: 99px;
+  padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.pause {
+  height: 60px;
+  width: 60px;
+  background-color: hsl(38, 89%, 72%);
+  color: white;
+  border-radius: 50%;
+}
+
+.generate_response {
+  animation: shrink 1s ease-in-out forwards, rotate 1s ease-in-out infinite;
+}
+
+@keyframes shrink {
+  from {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+  }
+  to {
+    height: 20px;
+    width: 20px;
+    padding: 1px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.recording {
+  animation: recording infinite 1s ease-in-out;
+}
+
+@keyframes recording {
+  0% {
+    background: linear-gradient(
+      to right,
+      hsl(38, 89%, 72%),
+      hsl(38, 89%, 62%),
+      hsl(38, 89%, 72%),
+      hsl(38, 89%, 62%)
+    );
+    box-shadow: hsl(237, 89%, 72%) 0px 2px 4px;
+  }
+  25% {
+    background: linear-gradient(
+      to right,
+      hsl(38, 89%, 62%),
+      hsl(38, 89%, 72%),
+      hsl(38, 89%, 62%),
+      hsl(38, 89%, 72%)
+    );
+    box-shadow: hsl(110, 89%, 72%) -2px 0px 4px;
+  }
+  50% {
+    background: linear-gradient(
+      to right,
+      hsl(38, 89%, 72%),
+      hsl(38, 89%, 72%) hsl(38, 89%, 62%),
+      hsl(38, 89%, 62%)
+    );
+    box-shadow: hsl(0, 89%, 72%) 2px 0px 4px;
+  }
+  75% {
+    background: linear-gradient(
+      to right,
+      hsl(38, 89%, 62%),
+      hsl(38, 89%, 62%) hsl(38, 89%, 72%),
+      hsl(38, 89%, 72%)
+    );
+    box-shadow: hsl(53, 89%, 72%) 2px 0px 4px;
+  }
+}
+
+.question_set {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.feedback_content {
+  position: relative;
+  width: 100%;
+}
+
+.question_no {
+  position: absolute;
+  color: black;
+  font-family: "satoshi BLACK";
+  background-color: white;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 2px solid hsl(38, 89%, 62%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.button {
+  padding: 4px 8px;
+  border: 1px solid #c7c7c7;
+  color: hsl(0, 0%, 58%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "satoshi BOLD";
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 16px;
+  border: 2px solid hsl(210, 20%, 88%);
+}
+
+.button:hover {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.button img {
+  margin-right: 5px;
+}
