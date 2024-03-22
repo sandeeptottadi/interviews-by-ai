@@ -1,0 +1,94 @@
+.generate_questions_container {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.generate_questions_container h1 {
+  font-family: "satoshi BLACK";
+  font-weight: 900;
+}
+
+.job_titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-direction: row;
+  width: 700px;
+  max-width: 90%;
+  flex-wrap: wrap;
+}
+
+.job_title {
+  padding: 8px 12px;
+  border-radius: 100px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1.4px solid #c6c9cf;
+  background-color: #f7f8fa;
+  color: #6a6c70;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+  font-family: "satoshi REGULAR";
+  font-weight: 900;
+}
+
+.job_title:hover:not(.active_job_title) {
+  background-color: #dadce0;
+}
+
+.active_job_title {
+  background-color: hsl(38, 88%, 92%);
+  color: hsl(38, 88%, 42%);
+  border-color: hsl(38, 88%, 42%);
+  font-family: "satoshi REGULAR";
+  font-weight: 900;
+}
+
+.description_input {
+  width: 700px;
+  max-width: 90%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1.5px solid #c6c9cf;
+  outline: none;
+  color: #6a6c70;
+  font-size: 1rem;
+  font-family: "satoshi MEDIUM";
+  font-weight: 900;
+}
+
+.description_input:focus {
+  border: 1.5px solid hsl(38, 88%, 42%);
+}
+
+.generate_btn {
+  background: linear-gradient(to left, hsl(38, 88%, 65%), hsl(38, 88%, 52%));
+  color: white;
+  padding: 10px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.generate_btn img {
+  margin-left: 15px;
+}
+
+.generate_btn:hover {
+  background: linear-gradient(to left, hsl(38, 88%, 52%), hsl(38, 88%, 62%));
+}

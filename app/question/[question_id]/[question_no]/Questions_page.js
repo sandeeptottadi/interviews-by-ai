@@ -78,10 +78,13 @@ export default function Questions_page() {
     const formData = new FormData();
     formData.append("question", question);
     formData.append("audio", audioBlob);
-    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/generate_response`, {
-      method: "POST",
-      body: formData,
-    })
+    fetch(
+      `${process.env.NEXT_PUBLIC_API_ENDPOINT}/interviews/generate_response`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         setFeedback(data.feedback);

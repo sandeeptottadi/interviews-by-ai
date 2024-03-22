@@ -17,14 +17,35 @@ import {
 import right_arrow from "./right_arrow.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 
-export default function Generate_question() {
+export default function Generate_question({ params }) {
   const [jobTitle, setJobTitle] = useState("Custom Job Description");
   const [jobDescription, setJobDescription] = useState("");
   const [questions, setQueestions] = useState([]);
   const jobDescriptionRef = useRef(null);
   const router = useRouter();
+  const job_id = params.job_id;
+
+  function extractContent(s) {
+    var span = document.createElement("span");
+    span.innerHTML = s;
+    return span.textContent || span.innerText;
+  }
+
+  useEffect(() => {
+    fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/getDescription`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ job_id }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setJobDescription(extractContent(data.description));
+      });
+  }, []);
 
   const handleJobDescriptionChange = () => {
     setJobDescription(jobDescriptionRef.current.value);
