@@ -62,7 +62,7 @@ export default function Generate_question({ params }) {
 
   useEffect(() => {
     if (jobTitle === "Custom Job Description") {
-      setJobDescription(jobTitle);
+      setJobDescription("Loading...");
     } else if (jobTitle === "Software Engineer") {
       setJobDescription(software_engineer);
     } else if (jobTitle === "Product Manager") {
@@ -191,7 +191,7 @@ export default function Generate_question({ params }) {
           className={styles.description_input}
           type="text"
           value={jobDescription}
-          placeholder="Enter a job title"
+          placeholder="Loading..."
         />
         <button
           onClick={() => generate_questions()}
