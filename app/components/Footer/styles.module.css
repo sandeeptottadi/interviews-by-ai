@@ -1,0 +1,28 @@
+.footer_container {
+  display: flex;
+  background-color: #f7f8fa;
+  padding: 20px 50px;
+  font-family: "satoshi REGULAR";
+  font-size: 0.9rem;
+  color: #6a6c70;
+  border-top: 1px solid #c6c9cf;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: hsl(38, 88%, 60%);
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-family: "satoshi BLACK";
+  font-weight: 700;
+}
+
+.footer_container img {
+  height: 40px;
+  width: 40px;
+}

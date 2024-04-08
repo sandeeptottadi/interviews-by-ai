@@ -1,5 +1,6 @@
 "use server";
 
+import Footer from "@/app/components/Footer/Footer";
 import Questions_page from "./Questions_page";
 
 export async function generateMetadata({ params, searchParams }, parent) {
@@ -14,6 +15,7 @@ export default async function page() {
   return (
     <div>
       <Questions_page />
+      <Footer />
     </div>
   );
 }

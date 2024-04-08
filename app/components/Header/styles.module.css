@@ -4,6 +4,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -16,4 +23,46 @@
 
 .header img {
   margin-left: 20px;
+}
+
+.header_items {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.header_item {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "satoshi MEDIUM";
+  cursor: pointer;
+}
+
+.header_item img {
+  margin-right: 8px;
+  margin-left: 0px !important;
+}
+
+.header_item:nth-child(2) {
+  border: 1.5px solid hsl(210, 20%, 88%);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  .header img {
+    height: 40px;
+    width: 40px;
+  }
+  .header_items {
+    display: none;
+  }
 }

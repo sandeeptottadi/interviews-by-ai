@@ -22,7 +22,10 @@ export default function Feedback({ feedback }) {
         <Image id="feedback-arrow" src={right_arrow} alt="arrow" />
       </div>
       <div id="feedback-modal" className={styles.feedback_modal}>
-        <div className={styles.feedback}>{feedback}</div>
+        <div
+          className={styles.feedback}
+          dangerouslySetInnerHTML={{ __html: feedback }}
+        ></div>
       </div>
     </div>
   );

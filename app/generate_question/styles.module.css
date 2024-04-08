@@ -1,5 +1,4 @@
 .generate_questions_container {
-  margin-top: 30px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,8 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
   flex-direction: row;
   width: 700px;
   max-width: 90%;
@@ -56,7 +53,7 @@
   max-width: 90%;
   padding: 10px 15px;
   border-radius: 10px;
-  height: 300px;
+  height: 250px;
   margin-top: 20px;
   margin-bottom: 20px;
   border: 1.5px solid #c6c9cf;
@@ -91,4 +88,76 @@
 
 .generate_btn:hover {
   background: linear-gradient(to left, hsl(38, 88%, 52%), hsl(38, 88%, 62%));
+}
+
+.generate_question_from_container {
+  margin-top: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.generate_question_from_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.generate_question_from_item {
+  height: 90px;
+  width: 90px;
+  border: 2px solid #c6c9cf;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8rem;
+  padding: 8px;
+  cursor: pointer;
+  font-family: "satoshi MEDIUM";
+}
+
+.generate_question_from_item:not(.active):hover {
+  background-color: #f7f8fa;
+}
+
+.generate_question_from_item svg {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.active {
+  padding: 2px;
+  background-color: hsl(38, 88%, 92%);
+  color: hsl(38, 88%, 42%);
+  border-color: hsl(38, 88%, 42%);
+  font-family: "satoshi MEDIUM";
+}
+
+.active svg {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+  fill: hsl(38, 88%, 42%);
+}
+
+@media (max-width: 700px) {
+  .generate_questions_container h1 {
+    font-size: 1.5rem;
+  }
+  .job_title {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .generate_btn {
+    font-size: 1rem;
+  }
+  .description_input {
+    font-size: 0.9rem;
+  }
 }

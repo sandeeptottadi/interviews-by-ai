@@ -14,10 +14,12 @@ import {
   software_engineer,
   ui_ux_designer,
 } from "./job_descriptions";
-import right_arrow from "./right_arrow.svg";
+import right_arrow from "./icons/right_arrow.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import Generate_question_from from "./Generate_question_from";
 
 export default function Generate_question() {
   const [jobTitle, setJobTitle] = useState("Custom Job Description");
@@ -95,6 +97,7 @@ export default function Generate_question() {
     <div className={styles.generate_questions_page}>
       <Header />
       <div className={styles.generate_questions_container}>
+        <Generate_question_from />
         <h1>Select a job Description</h1>
         <div className={styles.job_titles}>
           <div
@@ -186,6 +189,9 @@ export default function Generate_question() {
             </div>
           );
         })}
+      </div>
+      <div style={{ marginTop: "50px" }}>
+        <Footer />
       </div>
     </div>
   );
